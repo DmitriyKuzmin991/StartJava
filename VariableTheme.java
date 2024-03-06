@@ -112,7 +112,8 @@ public class VariableTheme {
         System.out.println("   " + simbolOne +"  "+ simbolTwo + "   ");
         System.out.println("  " + simbolOne + simbolFive + simbolThree + " " + simbolFour + simbolTwo + "  ");
         System.out.println(" " + simbolOne +"      "+ simbolTwo + " ");
-        System.out.println("" + simbolOne + simbolFive+ simbolFive+ simbolFive+ simbolFive + simbolOne+ simbolTwo + simbolFive +simbolFive +  simbolTwo);
+        System.out.println("" + simbolOne + simbolFive+ simbolFive+ simbolFive+ simbolFive + simbolOne +
+         simbolTwo + simbolFive +simbolFive +  simbolTwo);
         System.out.println();
 
         System.out.println("Quest eight: вывод количества сотен, десятков и единиц числа");
@@ -130,7 +131,8 @@ public class VariableTheme {
         int hours = amountSecond / 60 / 60;
         int minutes = amountSecond / 60 % 60;
         int seconds = amountSecond % 60;
-        System.out.printf("Имеется %d секунд, это - %d часа, %d минут, %d секунд.\n", amountSecond, hours, minutes, seconds);
+        System.out.printf("Имеется %d секунд, это - %d часа, %d минут, %d секунд.\n",
+         amountSecond, hours, minutes, seconds);
         System.out.printf("%d:%d:%d", hours, minutes, seconds);
         
         
