@@ -18,7 +18,5 @@ public class Calculator {
             }
         }
         System.out.printf("%d %s %d = %d",a,sign,b,rersult);
-            
-        
     }
 }
