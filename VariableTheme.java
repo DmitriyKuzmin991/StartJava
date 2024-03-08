@@ -108,6 +108,7 @@ public class VariableTheme {
         char simbolThree = '(';
         char simbolFour = ')';
         char simbolFive = '_';
+        System.out.printf("    %1$    ");
         System.out.println("    " + simbolOne + simbolTwo + "    ");
         System.out.println("   " + simbolOne +"  "+ simbolTwo + "   ");
         System.out.println("  " + simbolOne + simbolFive + simbolThree + " " + simbolFour + simbolTwo + "  ");
