@@ -168,7 +168,6 @@ public class CyclesTheme {
         System.out.println("Task ten: таблица умножения Пифагора");
         System.out.printf(" |%3d%3d%3d%3d%3d%3d%3d%3d%n",2,3,4,5,6,7,8,9);
         System.out.println("__________________________");
-        int startValue = 2;
         for (int i = 2; i < 10; i++) {
             System.out.print(i + "|");
             for (int j = 2; j < 10; j++) {
