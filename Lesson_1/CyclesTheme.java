@@ -1,3 +1,4 @@
+package Lesson_1;
 public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("Task one: подсчёт суммы четных и нечетных чисел");

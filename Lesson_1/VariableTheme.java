@@ -1,3 +1,4 @@
+package Lesson_1;
 public class VariableTheme {
     public static void main(String[] args) {
         System.out.println("First quest");
@@ -5,9 +6,9 @@ public class VariableTheme {
         short sh = 256; // Total hardDisk space GB
         int a = 4096; // DRM GB
         long l = 3200L; // Мигагерц процессор
-        double d = 5.55; // Speed of SDD
-        float fl = 3.14F; // PI const
-        char ch = 'a';
+       // double d = 5.55; // Speed of SDD
+        //float fl = 3.14F; // PI const
+        //char ch = 'a';
         boolean bool  = true; // My computer is cool?
         System.out.println(
             String.format("Мой компъютер имеет %d ядра,\n" +

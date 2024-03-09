@@ -1,3 +1,4 @@
+package Lesson_1;
 class IfElseStatementTheme {
     public static void main(String[] args) {
         /*System.out.println("Task one: перевод псевдокода");
