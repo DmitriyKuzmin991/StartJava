@@ -16,61 +16,52 @@ public class CyclesTheme {
             startRange++;
         } while(startRange <= finishRange);
         System.out.printf("In range [-10, 21] sum of even value = %d, and sum of not even value = %d%n",
-         sumOfEvenNumber, sumOfNotEvenNumber);
-         System.out.println();
+        sumOfEvenNumber, sumOfNotEvenNumber);
+        System.out.println();
 
-         System.out.println("Task two: вывод чисел в порядке убывания");
-         int firstValueTaskTwo = 10;
-         int secondValueTaskTwo = 5;
-         int thirdValueTaskTwo = -1;
-         int maxValue = firstValueTaskTwo;
-         int minValue = secondValueTaskTwo;
-         if (secondValueTaskTwo > maxValue) {
+        System.out.println("Task two: вывод чисел в порядке убывания");
+        int firstValueTaskTwo = 10;
+        int secondValueTaskTwo = 5;
+        int thirdValueTaskTwo = -1;
+        int maxValue = firstValueTaskTwo;
+        int minValue = secondValueTaskTwo;
+        if (secondValueTaskTwo > firstValueTaskTwo) {
             maxValue = secondValueTaskTwo;
             minValue = firstValueTaskTwo;
-            if (thirdValueTaskTwo > maxValue) {
-                maxValue = thirdValueTaskTwo;
-            } else if (thirdValueTaskTwo < minValue) {
-                minValue = thirdValueTaskTwo;
-            }
-        } else {
-            if (thirdValueTaskTwo > maxValue) {
-                maxValue = thirdValueTaskTwo;
-            } else if (thirdValueTaskTwo < minValue) {
-                minValue = thirdValueTaskTwo;
-            }
         }
-        for (int i = minValue; i <= maxValue; i++) {
+        if (thirdValueTaskTwo > maxValue) maxValue = thirdValueTaskTwo; 
+        else if (thirdValueTaskTwo < minValue) minValue = thirdValueTaskTwo;
+        
+        for (int i = maxValue; i >= minValue; i--) {
             System.out.print( i + " ");
         }
         System.out.println();
-        System.out.println();
-
+        
         System.out.println("Task three: вывод реверсивного числа и суммы его цифр");
         int taskThreeNumber = 1234;
         int sumOfNumbers = 0;
         System.out.print("Исходное число в обратном порядке: ");
-        while (true) {
+        while (taskThreeNumber > 0) {
             int temp = taskThreeNumber % 10;
             System.out.print(temp);
             sumOfNumbers += temp;
-            taskThreeNumber /= 10; 
-            if (taskThreeNumber == 0) break;
+            taskThreeNumber /= 10;  
         }
-        System.out.println("\nСумма цифр исходного числа = " + sumOfNumbers);
+        System.out.println();
+        System.out.println("Сумма цифр исходного числа = " + sumOfNumbers);
         System.out.println();
         
         System.out.println("Task four: вывод числа в несколько строк");
+        int sizeRow = 5;
         int startIndex = 1;
         int limitIndex = 24;
-        for (; startIndex < limitIndex; startIndex+=10) {
-            int numberOne = checkIntRange(startIndex, limitIndex);
-            int numberTwo = checkIntRange(startIndex + 2, limitIndex);
-            int numberThree = checkIntRange(startIndex + 4, limitIndex);
-            int numberFour = checkIntRange(startIndex + 6, limitIndex);
-            int numberFive = checkIntRange(startIndex + 8, limitIndex);
-            System.out.printf("%3d%3d%3d%3d%3d%n",numberOne , numberTwo, numberThree,
-            numberFour, numberFive);
+        for (int i = startIndex; i < limitIndex; ) {
+            for (int j = 0; j < sizeRow; j++) {
+                if (i  <  limitIndex) System.out.printf("%3d", i);
+                else System.out.printf("%3d", 0);
+                i += 2;
+            }
+            System.out.println();
         }
          System.out.println();
          
@@ -78,7 +69,7 @@ public class CyclesTheme {
         int taskFiveValue = 3242592;
         int countOfDigitsTwo = 0;
         int temp = taskFiveValue;
-        while (temp != 0) {
+        while (temp > 0) {
             if (temp%10 == 2) {
                 countOfDigitsTwo++;
             }
@@ -91,19 +82,26 @@ public class CyclesTheme {
         System.out.println();
 
         System.out.println("Task six: отображение геометрических фигур");
-        for (int j = 0; j < 5; j++) {
-            System.out.println("*********");
-        }
-        System.out.println();
-        int countOfCycles = 5;
-        while (countOfCycles != 0) {
-            int repeat = countOfCycles;
-            while (repeat != 0) {
-                System.out.print("#");
-                repeat--;
+        int lenghtRow = 5;
+        int columnHeight = 5;
+        char drowSign = '*';
+        for (int i = 0; i < columnHeight; i++) {
+            for (int j = 0; j < lenghtRow; j++) {
+                System.out.print(drowSign);
             }
             System.out.println();
-            countOfCycles--;
+        }
+        System.out.println();
+
+        int repeat = lenghtRow;
+        while (repeat >  0) {
+            int counterSign = repeat;
+            while (counterSign > 0) {
+                System.out.print("#");
+                counterSign--;
+            }
+            System.out.println();
+            repeat--;
         }
         System.out.println();
         int taskFiveNumberOfRepeat = 3;
@@ -167,10 +165,10 @@ public class CyclesTheme {
         System.out.println();
 
         System.out.println("Task ten: таблица умножения Пифагора");
-        System.out.printf(" |%3d%3d%3d%3d%3d%3d%3d%3d%n",2,3,4,5,6,7,8,9);
-        System.out.println("__________________________");
+        System.out.printf("  |%3d%3d%3d%3d%3d%3d%3d%3d%n",2,3,4,5,6,7,8,9);
+        System.out.println("--+-----------------------");
         for (int i = 2; i < 10; i++) {
-            System.out.print(i + "|");
+            System.out.print(i + " |");
             for (int j = 2; j < 10; j++) {
                 System.out.printf("%3d",i * j);
             }
@@ -183,11 +181,5 @@ public class CyclesTheme {
             System.out.print(figure);
             count--;
         }
-    }
-
-
-    static int checkIntRange (int number, int limitRange) {
-        if (number > limitRange) return 0;
-        return number;
     }
 }
