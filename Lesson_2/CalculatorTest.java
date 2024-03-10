@@ -10,11 +10,12 @@ public class CalculatorTest {
         while (flag) {
             System.out.print("Введите первое число: ");
             int firstNumber = scan.nextInt();
-            System.out.println();
+            
 
             System.out.print("Введите знак математической операции: ");
-            String simbol = scan.next();
-            System.out.println();
+            scan.nextLine();
+            char simbol = scan.nextLine().charAt(0);
+            
 
             System.out.print("Введите второе число: ");
             int secondNumber = scan.nextInt();
@@ -25,7 +26,8 @@ public class CalculatorTest {
             System.out.println();
                 while (true) {
                     System.out.println("Хотите продолжить вычисление? [yes/no] ");
-                    String answer = scan.next();
+                    scan.nextLine();
+                    String answer = scan.nextLine();
                     if (answer.equals("yes")) break;
                     else if (answer.equals("no")) {
                         flag = false;
