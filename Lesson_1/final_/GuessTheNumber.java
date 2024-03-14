@@ -1,4 +1,4 @@
-package Lesson_1;
+package Lesson_1.final_;
 public class GuessTheNumber {
     public static void main(String[] args) {
         int randomNumber = (int)(Math.random() * 100 + 1);

@@ -1,4 +1,4 @@
-package Lesson_1;
+package Lesson_1.base;
 class VariableNamesTheme {
     public static void main(String[] args) {
     // Вывод цифры в консоль

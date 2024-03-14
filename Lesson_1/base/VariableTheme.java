@@ -1,4 +1,4 @@
-package Lesson_1;
+package Lesson_1.base;
 public class VariableTheme {
     public static void main(String[] args) {
         System.out.println("First quest");
